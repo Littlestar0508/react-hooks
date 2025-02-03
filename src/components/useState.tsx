@@ -3,7 +3,7 @@ import S from './useState.module.css';
 
 export default function UseState() {
   // const [state, setState(updater)] = useState(initialValue); 로 사용
-  const [state, setState] = useState(1);
+  // const [state, setState] = useState(1);
 
   // string
   // const [state1, setState1] = useState('hello');
@@ -23,9 +23,25 @@ export default function UseState() {
 
   // state의 값을 변경하기 위한 함수
   // updater를 통해 상태가 변경
+  // const handleChangeNumber = () => {
+  //   setState(state + 1);
+  //   setState(state + 1);
+  //   setState(state + 1);
+  // };
+
+  // 초기화 함수를 사용한 useState
+  const initialFunction = (): number => {
+    console.log(1);
+    return 1 + 1;
+  };
+
+  // 매 렌더링마다 함수 실행
+  // const [state, setState] = useState(initialFunction());
+
+  const [state, setState] = useState(initialFunction);
+
   const handleChangeNumber = () => {
     setState((s) => s + 1);
-    console.log(state);
   };
 
   return (
