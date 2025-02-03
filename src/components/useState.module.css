@@ -1,0 +1,9 @@
+.use-state {
+  background-color: #3c4b9e;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
