@@ -1,13 +1,13 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import UseState from '../components/useState';
+import UseMemo from './../components/useMemo/useMemo';
 
 const root = document.getElementById('react');
 
 if (root) {
   createRoot(root).render(
     <StrictMode>
-      <UseState />
+      <UseMemo />
     </StrictMode>
   );
 }
