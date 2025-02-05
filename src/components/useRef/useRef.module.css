@@ -9,3 +9,7 @@
   margin-block-start: 300px;
   cursor: pointer;
 }
+
+video {
+  margin-inline: 400px;
+}
