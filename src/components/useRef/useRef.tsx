@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import module from './useRef.module.css';
+import OuterComponent from './outerComponent';
 
 export default function UseRef() {
   /* -------------------------------------------------------------------------- */
@@ -30,18 +31,28 @@ export default function UseRef() {
   /*                                 비디오 태그 컨트롤                                 */
   /* -------------------------------------------------------------------------- */
 
-  const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  // const videoRef = useRef(null);
+  // const [isPlaying, setIsPlaying] = useState(false);
+
+  // const handleClick = () => {
+  //   const nextIsPlaying = !isPlaying;
+  //   setIsPlaying(nextIsPlaying);
+
+  //   if (nextIsPlaying) {
+  //     videoRef.current.play();
+  //   } else {
+  //     videoRef.current.pause();
+  //   }
+  // };
+
+  /* -------------------------------------------------------------------------- */
+  /*                                외부 DOM에 접근하기                                */
+  /* -------------------------------------------------------------------------- */
+
+  const outerComponentRef = useRef(null);
 
   const handleClick = () => {
-    const nextIsPlaying = !isPlaying;
-    setIsPlaying(nextIsPlaying);
-
-    if (nextIsPlaying) {
-      videoRef.current.play();
-    } else {
-      videoRef.current.pause();
-    }
+    console.log(outerComponentRef.current);
   };
 
   return (
@@ -50,7 +61,7 @@ export default function UseRef() {
         useRef
       </button>
       {/* <input type="text" ref={inputRef} /> */}
-      <video
+      {/* <video
         width="250"
         ref={videoRef}
         onPlay={() => setIsPlaying(true)}
@@ -60,7 +71,8 @@ export default function UseRef() {
           src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
           type="video/mp4"
         />
-      </video>
+      </video> */}
+      <OuterComponent ref={outerComponentRef} />
     </>
   );
 }
