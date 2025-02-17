@@ -1,6 +1,6 @@
-import { useRef, useState } from 'react';
-import module from './useRef.module.css';
+import { useRef } from 'react';
 import OuterComponent from './outerComponent';
+import module from './useRef.module.css';
 
 export default function UseRef() {
   /* -------------------------------------------------------------------------- */
