@@ -1,0 +1,30 @@
+form {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input {
+  background-color: gray;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 8px;
+  color: white;
+}
+
+label {
+  padding: 8px;
+  background-color: black;
+  color: yellow;
+}
+
+button {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+}
