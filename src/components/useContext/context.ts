@@ -1,5 +1,5 @@
 import { createContext } from 'react';
 
-const TestContext = createContext('initial test string');
+const ParentContext = createContext('initial test string');
 
-export default TestContext;
+export default ParentContext;
