@@ -8,9 +8,15 @@ export default function UseContext() {
   return (
     <>
       <ParentContext.Provider value={sendData}>
-        <div>useContext</div>
-        <Children />
+        <ParentContext.Provider value={sendData}>
+          <div>useContext</div>
+          <Children />
+        </ParentContext.Provider>
+        <ParentContext.Provider value={'hello'}>
+          <Children />
+        </ParentContext.Provider>
       </ParentContext.Provider>
+      <Children />
     </>
   );
 }
